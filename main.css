@@ -1,0 +1,61 @@
+body{ background-color: #3F464F; 
+	padding:0;margin:0;margin:0 auto;}
+#banner{position: absolute;
+	text-align: center;
+	width: 1080px;
+	height: 150px;}
+#bannerphoto{position: relative;
+	top:10px;
+	text-align: center;
+	z-index:999;}
+#content{ color: black;
+	top:150px;
+	text-align: center;
+	width: 1080px;
+	height: 550px;
+	font-family: Lucida Grande, Arial;
+	font-size: 10pt;
+	background-color: #C5EFFD; 
+}
+#content2{ color: black;
+	top:150px;
+	width: 1080px;
+	height: 550px;
+	font-family: Lucida Grande, Arial;
+	font-size: 9pt;
+	background-color: #C5EFFD; 
+}
+#about{position: absolute;
+	text-align: center;
+	color: white;
+	font-size:9pt;
+	font-family: Lucida Grande, Arial;
+	width: 1080px;
+	height: 20px;
+	}
+#photo{position: absolute;
+	top: 140px;
+	left: 100px;
+	}
+#photo2{position: absolute;
+	top: 375px;
+	left: 100px;
+	}
+#photo3{position: absolute;
+	top: 150px;
+	left: 600px;
+	}
+* { margin: 0; padding: 0; }
+#page{display:table;overflow:hidden;margin:0px auto;}
+*:first-child+html #page {position:relative;}/*ie7*/
+* html #page{position:relative;}/*ie6*/
+
+#content_container{display:table-cell;vertical-align: middle;}
+*:first-child+html #content_container{position:absolute;top:50%;}/*ie7*/
+* html #content_container{position:absolute;top:50%;}/*ie6*/
+
+*:first-child+html #content{position:relative;top:-50%;}/*ie7*/
+* html #content{position:relative;top:-50%;}/*ie6*/
+
+html,body{height:100%;}
+#page{height:100%;width:465px;}

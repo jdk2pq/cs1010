@@ -1,0 +1,92 @@
+<!-- 
+	Filename: 	coins_form.html
+	Date:		February 2006
+	Description: 	This script uses JavaScript to demonstrate some basic functionalities 
+-->
+<HTML>
+<HEAD>
+<TITLE>Example Javascript: Coin Counter</TITLE>
+
+<!-- CSS - Change the text color for anything in bold -->
+<style type="text/css">
+	h1 {
+		text-align: center;
+	}
+	b {	
+		color: red;
+	}
+</style>
+
+</HEAD>
+
+<body>
+<h1>Coin Counter Demonstration using JavaScript</h1>
+
+<!-- Create a form to gather user input -->
+<form name="coin_input">
+
+	<!-- Text Fields -->
+	Enter number of quarters:
+	<input type="text" name="quarters" value="" size=5> <br>
+	Enter number of dimes:
+	<input type="text" name="dimes" value="" size=5> <br>
+	Enter number of pennies:
+	<input type="text" name="pennies" value="" size=5> <br><br>
+
+
+
+	<!-- Button -->
+	<input type=button value="Calculate Number of Coins" onclick="calc_total()" >
+
+	<!-- Reset Form Button -->
+	<input type=reset value="Reset Form"><br><br>
+	
+	<!-- TextArea for Result : Empty to start -->
+	<textarea name="result" rows="5" cols="42"> </textarea>
+
+
+</form>
+<!-- JavaScript Example -->
+<SCRIPT LANGUAGE="JavaScript" type="text/javascript">
+
+	function calc_total()
+	{
+		/* Get number of quarters from form */
+		var num_quarters = document.coin_input.quarters.value;
+
+
+		/* Get the number of dimes from the form */
+		var num_dimes = document.coin_input.dimes.value;
+
+		/* Get the number of pennies from the HTML form*/
+		var num_pennies = document.coin_input.pennies.value;
+
+
+		/* convert the string responses to numbers (floats in particular) */
+		num_quarters = parseFloat(num_quarters);
+		num_dimes = parseFloat(num_dimes);
+		num_pennies = parseFloat(num_pennies);
+                 
+
+
+           
+		/*declare a new variable  and calculate the total value */
+		var total = num_quarters+num_dimes+num_pennies
+		var totalDollar = num_quarters*.25 + num_dimes*.1+num_pennies*.01;
+
+
+
+		/* TODO:  modify the following to produce a new statement with pennies and total */
+		document.coin_input.result.value = "You entered " + num_quarters + 
+		" quarters, " + num_dimes + " dimes and " + num_pennies + " pennies." +
+		"The total number of coins you have is: " + (total)
+		+ "            The amount of money you have is $" + totalDollar;
+
+
+	}
+	//-->
+
+</SCRIPT>
+<noscript> Your browser does not support JavaScript </noscript>
+</BODY>
+</HTML> 
